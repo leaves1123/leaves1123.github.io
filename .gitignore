@@ -1,8 +1,14 @@
-.vscode
+.vscode/
 .DS_Store
 public/
 .deploy_git/
 db.json
+2023/
+*.log
+*.iml
+.idea/
+.nyc_output/
+coverage/
 
 
 
