@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-10-28T06:47:48.000Z</updated>
+  <updated>2023-12-21T06:26:32.894Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>test2</title>
-    <link href="http://example.com/2023/10/28/test2/"/>
-    <id>http://example.com/2023/10/28/test2/</id>
-    <published>2023-10-28T06:47:48.000Z</published>
-    <updated>2023-10-28T06:47:48.000Z</updated>
+    <link href="http://example.com/2023/12/21/test2/"/>
+    <id>http://example.com/2023/12/21/test2/</id>
+    <published>2023-12-21T06:26:32.894Z</published>
+    <updated>2023-12-21T06:26:32.894Z</updated>
     
     
     <summary type="html">&lt;p align=&quot;center&quot;&gt;
@@ -65,11 +65,45 @@ alt=&quot;Build&quot; /&gt;&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
   </entry>
   
   <entry>
+    <title>html学习笔记</title>
+    <link href="http://example.com/2023/10/27/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2023/10/27/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2023-10-27T03:19:40.000Z</published>
+    <updated>2023-11-29T03:43:44.000Z</updated>
+    
+    
+    <summary type="html">&lt;h1 align=&quot;center&quot;&gt;
+HTML部分
+&lt;/h1&gt;
+&lt;h2 id=&quot;html是什么&quot;&gt;HTML是什么？&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;html(Hyper Text Markup Language), 超文本标签语言, 语言内容由标签组成,
+标签通常成对出现, 比如&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;, 少数是单标签,
+主要用于搭建网络框架, 通常与css和javascript联用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意: 对于成对的标签, 其是不可以交叉的, 比如: &lt;pre class=&quot;language-markup&quot; data-language=&quot;markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!--False--&gt;&lt;/span&gt;                    &lt;span class=&quot;token comment&quot;&gt;&amp;lt;!--True--&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;                          &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;                         &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;                          &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;                        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="learn" scheme="http://example.com/categories/learn/"/>
+    
+    
+    <category term="note" scheme="http://example.com/tags/note/"/>
+    
+    <category term="html" scheme="http://example.com/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hello world</title>
     <link href="http://example.com/2023/10/19/helloworld/"/>
     <id>http://example.com/2023/10/19/helloworld/</id>
     <published>2023-10-19T13:11:20.000Z</published>
-    <updated>2023-10-28T06:47:48.000Z</updated>
+    <updated>2023-12-21T06:26:32.892Z</updated>
     
     
       
@@ -94,7 +128,7 @@ alt=&quot;Build&quot; /&gt;&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
     <link href="http://example.com/2023/10/07/test-article/"/>
     <id>http://example.com/2023/10/07/test-article/</id>
     <published>2023-10-07T11:26:39.000Z</published>
-    <updated>2023-10-28T06:47:48.000Z</updated>
+    <updated>2023-12-21T06:26:32.892Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;一级标题&quot;&gt;一级标题&lt;/h1&gt;
