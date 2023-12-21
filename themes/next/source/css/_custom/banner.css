@@ -1,0 +1,18 @@
+/* Custom CSS to move GitHub banner to the left */
+.github-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    /* Adjust the width as needed */
+    background-color: #333;
+    /* Background color of the banner */
+    color: #fff;
+    /* Text color */
+    padding: 20px;
+    /* Padding inside the banner */
+    text-align: center;
+    z-index: 9999;
+    /* Ensure it appears above other elements */
+}

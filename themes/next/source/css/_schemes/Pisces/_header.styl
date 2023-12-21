@@ -1,0 +1,44 @@
+.column {
+  width: $sidebar-desktop;
+
+  +tablet-mobile() {
+    width: auto;
+  }
+}
+
+.site-brand-container {
+  background: var(--theme-color);
+  // background: rgba(0,0,128,.0);
+  background: #555e6;
+  // border-radius: 2 px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  margin-top: 0;
+  margin-bottom: 0px;
+
+  .site-nav-on & {
+    +tablet-mobile() {
+      box-shadow: 0 0 16px rgba(0, 0, 0, .5);
+    }
+  }
+}
+
+.site-meta {
+  padding: 12px 10;
+  // background: #1E90FF;
+  // background-color: transparent;
+}
+
+.site-nav-toggle, .site-nav-right {
+  +tablet() {
+    flex-column();
+  }
+
+  .toggle {
+    color: black;
+
+    .toggle-line {
+      background: black;
+    }
+  }
+}

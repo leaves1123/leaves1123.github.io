@@ -1,0 +1,64 @@
+header.header {
+  gemini-block();
+  border-radius: 16 px
+
+  +tablet-mobile() {
+    border-radius: 16 px;
+  }
+}
+
+.main {
+  // Make sure that .header and .main-inner are the same height
+  // Required for .sidebar `position: sticky;`
+  align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+  main-container()
+  margin-top: 0px;
+  // background #000000
+
+  if (hexo-config('sidebar.position') == 'right') {
+    flex-direction: row-reverse;
+  }
+
+  +tablet-mobile() {
+    display: block;
+    width: auto;
+  }
+}
+
+.main-inner {
+  border-radius: $border-radius-inner;
+  // border-radius: 16px;
+  box-sizing: border-box;
+  // box-sizing: 10px;
+  width: $content-wrap;
+  // width: 100px;
+  background: rgba(255,255,255,0.12);
+  margin-top: 0px;
+  margin-bottom: 10px
+  padding-top: 0;
+  padding-left: 10px;
+  padding-right: 10px:
+  // padding-bottom: 10px; 
+
+  +tablet-mobile() {
+    border-radius: initial;
+    width: 100%;
+  }
+}
+
+.footer-inner {
+  if (hexo-config('sidebar.position') == 'right') {
+    padding-right: $sidebar-desktop + $sidebar-offset;
+  } else {
+    padding-left: $sidebar-desktop + $sidebar-offset;
+    background: transparent
+  }
+
+  +tablet-mobile() {
+    padding-left: 0;
+    padding-right: 0;
+    width: auto;
+  }
+}
