@@ -140,7 +140,7 @@ sidebar:
   display: hide
 
   # Sidebar padding in pixels.
-  padding: 20
+  padding: 10
 
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
   offset: 15
@@ -381,12 +381,12 @@ codeblock:
   prism:
     light: prism-coy-without-shadows
     dark: prism-coy-without-shadows
-# Add copy button on codeblock
+  # Add copy button on codeblock
   copy_button:
     enable: true
-    # Available values: default | flat | mac
-    style: flat
-  # Fold code block
+  # Available values: default | flat | mac
+    style: mac
+    # Fold code block
   fold:
     enable: true
     height: 200
