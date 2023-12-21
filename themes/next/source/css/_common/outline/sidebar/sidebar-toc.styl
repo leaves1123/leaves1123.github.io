@@ -23,8 +23,8 @@ if (hexo-config('toc.enable')) {
 
     .nav-item {
       line-height: 1.8;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      overflow: hidden;    /* 隐藏溢出的文本 */
+      text-overflow: ellipsis;  /* 使用省略号表示文本被剪切 */
 
       if (not hexo-config('toc.wrap')) {
         white-space: nowrap;
