@@ -1462,7 +1462,7 @@ pre code {
 }
 .sidebar-inner {
   color: #999;
-  padding: 20px 10px;
+  padding: 10px 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1578,10 +1578,12 @@ pre code {
   overflow-x: hidden;
   overflow-y: auto;
   padding-top: 0;
+  margin-top: 20px;
   transition: padding-top 0.2s ease-in-out;
 }
 .sidebar-nav-active .sidebar-panel-container {
-  padding-top: 20px;
+  padding-top: 5px;
+  margin-top: 10px;
 }
 .sidebar-panel {
   animation: deactivate-sidebar-panel 0.2s ease-in-out;
@@ -1595,10 +1597,6 @@ pre code {
   transition-delay: 0s;
   transition-property: opacity, transform, visibility;
   visibility: hidden;
-}
-.sidebar-nav-active .sidebar-panel,
-.sidebar-overview-active .sidebar-panel.post-toc-wrap {
-  transform: translateY(-20px);
 }
 .sidebar-overview-active:not(.sidebar-nav-active) .sidebar-panel.post-toc-wrap {
   transition-delay: 0s, 0.2s, 0s;
@@ -1709,8 +1707,9 @@ pre code {
 }
 .post-toc .nav-item {
   line-height: 1.8;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: hidden; /* 隐藏溢出的文本 */
+  text-overflow: ellipsis; /* 使用省略号表示文本被剪切 */
+  white-space: nowrap;
 }
 .post-toc .nav .active > a {
   border-bottom-color: #fc6423;
@@ -3013,6 +3012,13 @@ header.header {
 }
 .sidebar {
   background-color: transparent;
+}
+.sidebar-inner {
+  padding-top: 10px;
+}
+.sidebar-nav {
+  z-index: 100; /* 使用比页面上其他元素更高的值 */
+/* 其他样式保持不变 */
 }
 .posts-expand .post {
   margin-top: 0px;

@@ -754,15 +754,13 @@ input:focus &#123;
 <h3 id="盒子阴影">盒子阴影</h3>
 <pre class="language-css" data-language="css"><code class="language-css"><span class="token property">box-shadow</span><span class="token punctuation">:</span> h-shadow v-shadow blur spread color inset<span class="token punctuation">;</span></code></pre>
 <figure>
-<img src="html学习笔记/盒子阴影.png,&#39;盒子阴影&#39;"
-alt="盒子阴影" />
+<img src="盒子阴影.png" title="盒子阴影" alt="盒子阴影" />
 <figcaption aria-hidden="true">盒子阴影</figcaption>
 </figure>
 <h3 id="文字阴影">文字阴影</h3>
 <pre class="language-css" data-language="css"><code class="language-css"><span class="token property">text-shadow</span><span class="token punctuation">:</span> h-shadow v-shadow blur color<span class="token punctuation">;</span></code></pre>
 <figure>
-<img src="html学习笔记/文字阴影.png,&#39;文字阴影&#39;"
-alt="文字阴影" />
+<img src="文字阴影.png" title="文字阴影" alt="文字阴影" />
 <figcaption aria-hidden="true">文字阴影</figcaption>
 </figure>
 <h2 id="浮动">浮动</h2>
@@ -775,8 +773,7 @@ alt="文字阴影" />
 <span class="token punctuation">&#125;</span></code></pre>
 <ul>
 <li><figure>
-<img src="html学习笔记/浮动特性.png,&#39;浮动特性&#39;"
-alt="浮动特性" />
+<img src="浮动特性.png" title="浮动特性" alt="浮动特性" />
 <figcaption aria-hidden="true">浮动特性</figcaption>
 </figure></li>
 <li>浮动的元素会一行内显示并且元素顶部对齐</li>
@@ -788,8 +785,7 @@ alt="浮动特性" />
 <li>有时需要清除浮动
 <ul>
 <li><figure>
-<img src="html学习笔记/浮动影响.png,&#39;浮动影响&#39;"
-alt="浮动影响" />
+<img src="浮动影响.png" title="浮动影响" alt="浮动影响" />
 <figcaption aria-hidden="true">浮动影响</figcaption>
 </figure></li>
 </ul></li>
