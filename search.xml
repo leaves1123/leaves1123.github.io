@@ -735,6 +735,96 @@ input:focus &#123;
 <p>行内元素为了照顾兼容性<code>(?)</code>, 尽量只设置左右内外边距,
 不要设置上下内外边距; 但是转换为块级和行内块元素就可以了</p>
 </blockquote>
+<h2 id="其它样式">其它样式</h2>
+<h3 id="圆角边框">圆角边框</h3>
+<p><code>border-radius</code>用于设置元素的外边框圆角</p>
+<pre class="language-css" data-language="css"><code class="language-css"><span class="token property">border-radius</span><span class="token punctuation">:</span> length<span class="token punctuation">;</span></code></pre>
+<p><sub>值越大弧度越明显</sub></p>
+<ul>
+<li><code>length</code>可以是数值也可以是百分比</li>
+<li>格式为<code>上右下左</code></li>
+<li>也可以分开写
+<ul>
+<li>border-top-left-radius</li>
+<li>border-top-right-radius</li>
+<li>border-bottom-right-radius</li>
+<li>border-bottom-left-radius</li>
+</ul></li>
+</ul>
+<h3 id="盒子阴影">盒子阴影</h3>
+<pre class="language-css" data-language="css"><code class="language-css"><span class="token property">box-shadow</span><span class="token punctuation">:</span> h-shadow v-shadow blur spread color inset<span class="token punctuation">;</span></code></pre>
+<figure>
+<img src="html学习笔记/盒子阴影.png,&#39;盒子阴影&#39;"
+alt="盒子阴影" />
+<figcaption aria-hidden="true">盒子阴影</figcaption>
+</figure>
+<h3 id="文字阴影">文字阴影</h3>
+<pre class="language-css" data-language="css"><code class="language-css"><span class="token property">text-shadow</span><span class="token punctuation">:</span> h-shadow v-shadow blur color<span class="token punctuation">;</span></code></pre>
+<figure>
+<img src="html学习笔记/文字阴影.png,&#39;文字阴影&#39;"
+alt="文字阴影" />
+<figcaption aria-hidden="true">文字阴影</figcaption>
+</figure>
+<h2 id="浮动">浮动</h2>
+<blockquote>
+<p>用于一行上显示多个盒子, 且默认盒子与盒子之间没有空隙, 布局用;
+标准流父元素排上下, 内部浮动子元素排左右</p>
+</blockquote>
+<pre class="language-css" data-language="css"><code class="language-css"><span class="token selector">选择器</span><span class="token punctuation">&#123;</span>
+    <span class="token property">float</span><span class="token punctuation">:</span> none | left | right<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<ul>
+<li><figure>
+<img src="html学习笔记/浮动特性.png,&#39;浮动特性&#39;"
+alt="浮动特性" />
+<figcaption aria-hidden="true">浮动特性</figcaption>
+</figure></li>
+<li>浮动的元素会一行内显示并且元素顶部对齐</li>
+<li>浮动的元素会具有行内块元素的特性
+<ul>
+<li>大小根据内容决定</li>
+<li>一个元素浮动, 兄弟元素也要浮动</li>
+</ul></li>
+<li>有时需要清除浮动
+<ul>
+<li><figure>
+<img src="html学习笔记/浮动影响.png,&#39;浮动影响&#39;"
+alt="浮动影响" />
+<figcaption aria-hidden="true">浮动影响</figcaption>
+</figure></li>
+</ul></li>
+</ul>
+<pre class="language-css" data-language="css"><code class="language-css"><span class="token selector">选择器</span><span class="token punctuation">&#123;</span>
+    <span class="token property">clear</span><span class="token punctuation">:</span> left | right | both<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<p>推荐的方法为父级添加after伪元素</p>
+<pre class="language-css" data-language="css"><code class="language-css"><span class="token selector">.clearfix:after</span> <span class="token punctuation">&#123;</span>  
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span> 
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> 
+    <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> 
+    <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span> 
+    <span class="token property">visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>  
+<span class="token punctuation">&#125;</span> 
+<span class="token selector">.clearfix</span> <span class="token punctuation">&#123;</span>  <span class="token comment">/* IE6、7 专有 */</span> 
+    *<span class="token property">zoom</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>   </code></pre>
+<p>或者给父级添加双伪元素 <pre class="language-css" data-language="css"><code class="language-css"><span class="token selector">.clearfix:before,.clearfix:after</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span>table<span class="token punctuation">;</span> 
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.clearfix:after</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">clear</span><span class="token punctuation">:</span>both<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.clearfix</span> <span class="token punctuation">&#123;</span>
+    *<span class="token property">zoom</span><span class="token punctuation">:</span>1<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>   </code></pre> <sub>一般用这个</sub> &gt;
+如果父盒子本身有高度, 则不需要清除浮动</p>
+<h2 id="ps切图">ps切图</h2>
+<blockquote>
+<p>ps+cutterman</p>
+</blockquote>
+<p><a
+href="http://www.cutterman.cn/zh/cutterman">cutterman</a>为<code>ps</code>中的插件</p>
 ]]></content>
       <categories>
         <category>learn</category>
