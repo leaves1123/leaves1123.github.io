@@ -109,7 +109,7 @@ theme: next
 deploy:
   type: git
   repo: https://github.com/leaves1123/leaves1123.github.io.git
-  branch: main
+  branch: gh-pages
   token: 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
 
 # 搜索框
