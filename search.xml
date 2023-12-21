@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>test2</title>
+    <url>/2023/10/28/test2/</url>
+    <content><![CDATA[<p align="center">
+<a href="https://tatum.io/">
+<img src="https://assets-global.website-files.com/62624e283b503f3e68275638/62624e283b503fde012757c1_Light.svg" alt="Logo" width="200" height="100">
+</a>
+</p>
+<h3 align="center">
+Tatum SDK
+</h3>
+<p align="center">
+Welcome to Tatum SDK - TypeScript/JavaScript Library for Simplifying
+Blockchain Development.<br>
+<a href="https://docs.tatum.io/"><strong>Documentation</strong></a> <br>
+<br>
+<a href="https://github.com/tatumio/tatum-js/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report
+bug</a>
+</p>
+<div data-align="center">
+<p><a href=""><a
+href="https://img.shields.io/npm/dm/@tatumio/tatum"><img
+src="https://img.shields.io/npm/dm/@tatumio/tatum"
+alt="GitHub license" /></a></a> <a href=""><a
+href="https://www.npmjs.com/package/@tatumio/tatum"><img
+src="https://img.shields.io/npm/v/@tatumio/tatum.svg?style=flat-square"
+alt="npm version" /></a></a> <a href=""><a
+href="https://github.com/tatumio/tatum-js/blob/master/LICENSE.txt"><img
+src="https://img.shields.io/badge/license-MIT-blue.svg"
+alt="GitHub license" /></a></a> <a href=""><a
+href="https://img.shields.io/github/actions/workflow/status/tatumio/tatum-js/build.yml?branch=master"><img
+src="https://img.shields.io/github/actions/workflow/status/tatumio/tatum-js/build.yml?branch=master"
+alt="Build" /></a></a></p>
+</div>
+<hr>
+<span id="more"></span>
+<h2 id="tatum-sdk">Tatum SDK</h2>
+<p>A powerful...</p>
+<ul>
+<li>A user-friendly interface</li>
+<li>Consistent interaction with a broad...</li>
+</ul>
+<p>For more details, visit our <a
+href="https://www.example.com">documentation</a> and <a
+href="https://www.example.com">getting started guide</a>.</p>
+<p>With Tatum SDK, you can:</p>
+<h2 id="perform-native-rpc-calls">Perform Native RPC Calls</h2>
+<p>Interact sealessly with various blockchains through...</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>EVM Blockchains</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><a href="https://www.example.com"
+title="None">Ethereum RPC</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><a
+href="https://www.xxx.com">Polygon</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="create-notifications">Create Notifications</h2>
+<p>Effortly monitor wallet activities...</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><a href="https://www.example.com">Start
+monitoring of the address</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><a href="https://www.example.com">Stop
+monitoring of the address</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="access-wallet-information">Access Wallet Information</h2>
+<p>Through a single interface, obtain...</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">DOcumentation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><a href="https://www.example.com">Get
+all assets the wallet holds</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><a href="https://www.example.com">Get
+all transactions on the wallet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="section">...</h2>
+<h2 id="installation">Installation</h2>
+<p>To install...</p>
+<p><strong>Install using <code>npm</code></strong></p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> @xxx</code></pre>
+<p><strong>Install using <code>yarn</code></strong></p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> <span class="token function">add</span> @xxx</code></pre>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="basic-usage">Basic Usage</h3>
+<p>...</p>
+<h3 id="initialzation">🤩 Initialzation</h3>
+<p>start by importing the...</p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> TatumSDK<span class="token punctuation">,</span> Network<span class="token punctuation">,</span> Ethereum <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@tatumio/tatum'</span>
+const tatum <span class="token operator">=</span> <span class="token keyword">await</span> TatumSDK<span class="token punctuation">.</span>init<span class="token operator">&lt;</span>Ethereum<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> network<span class="token punctuation">:</span> Network<span class="token punctuation">.</span>ETHEREUM<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
+<p><br><br></p>
+]]></content>
+      <tags>
+        <tag>None</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hello world</title>
+    <url>/2023/10/19/helloworld/</url>
+    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&amp;id=1348599&amp;auto=1&amp;height=66">
+</iframe>
+]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+      <tags>
+        <tag>None</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2023/10/07/test-article/</url>
+    <content><![CDATA[<h1 id="一级标题">一级标题</h1>
+<p>this package allows to... <span id="more"></span></p>
+<p><img src="process.png" /></p>
+<h2 id="introduction">Introduction</h2>
+<p>The package is composed of three parts:</p>
+<ul>
+<li><a href="https://www.example.com">FNPEAKS</a> for efficient
+calculation of...</li>
+<li>Python module <a href="https://www.example.com"
+title="python">varana</a> for analyzing time series...</li>
+<li>Bash wrapper as a user-friendly text interface</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<pre class="language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> clone https://github.com/<span class="token punctuation">..</span>.
+$ <span class="token builtin class-name">cd</span> variability-analyser
+$ <span class="token function">bash</span> <span class="token function">install</span></code></pre>
+<p>Set the <code>installation directory</code>, download and install
+essential components automatically.</p>
+<h2 id="uninstall">Uninstall</h2>
+<p>to uninstall the software entirely remove the installation
+directory.</p>
+<h2 id="usage">Usage</h2>
+<p>To get more info please check the <a
+href="https://www.example.com">doc</a>.</p>
+<h2 id="contribution">Contribution</h2>
+<p>...</p>
+]]></content>
+      <tags>
+        <tag>None</tag>
+      </tags>
+  </entry>
+</search>
