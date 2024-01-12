@@ -1598,6 +1598,10 @@ pre code {
   transition-property: opacity, transform, visibility;
   visibility: hidden;
 }
+.sidebar-nav-active .sidebar-panel,
+.sidebar-overview-active .sidebar-panel.post-toc-wrap {
+  transform: translateY(-20px);
+}
 .sidebar-overview-active:not(.sidebar-nav-active) .sidebar-panel.post-toc-wrap {
   transition-delay: 0s, 0.2s, 0s;
 }
@@ -1709,7 +1713,6 @@ pre code {
   line-height: 1.8;
   overflow: hidden; /* 隐藏溢出的文本 */
   text-overflow: ellipsis; /* 使用省略号表示文本被剪切 */
-  white-space: nowrap;
 }
 .post-toc .nav .active > a {
   border-bottom-color: #fc6423;
