@@ -650,8 +650,41 @@ text-shadow: h-shadow v-shadow blur color;
 
 [cutterman](http://www.cutterman.cn/zh/cutterman)为`ps`中的插件
 
+## CSS书写属性
 
+> 一般遵循以下顺序
 
+1. **布局定位属性**：display / position / float / clear / visibility / overflow（建议 display 第一个写，毕竟关系到模式）
+2. **自身属性**：width / height / margin / padding / border / background
+3. **文本属性**：color / font / text-decoration / text-align / vertical-align / white- space / break-word
+4. **其他属性（CSS3）**：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient …
+
+e.g.
+```css
+.jdc {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    padding: 20px 0;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color: #333;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+} 
+```
+
+## 页面布局整体思路
+
+1. 必须确定页面的版心, 即可视区域
+2. 分析页面中的行模块以及每个行模块的列模块
+3. 一行中的列模块经常浮动布局, 先确定每个列的大小, 再确定列的位置(e.g. float: left)
+4. 先结构, 后样式
+5. coding之前先在脑海中搭建好结构
+
+<b>这个例子还需要再练习一遍</b>
 
 
 
