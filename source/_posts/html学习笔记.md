@@ -5,7 +5,7 @@ tags:
     - note
     - html
 categories: learn
-sticky: 300
+sticky: 1
 ---
 
 <h1 align="center">HTML部分</h1>
