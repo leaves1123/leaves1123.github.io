@@ -725,6 +725,159 @@ float: left)</li>
 <li>coding之前先在脑海中搭建好结构</li>
 </ol>
 <p><b>这个例子还需要再练习一遍</b></p>
+<h2 id="定位position">定位(position)</h2>
+<h3 id="为什么要使用定位">为什么要使用定位</h3>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">定位可用于让盒子自由的在某个盒子内移动位置或者固定在屏幕中的某个位置, 且可以压住其它盒子(浮动的效果)</code></pre>
+<h3 id="定位的组成">定位的组成</h3>
+<p>定位 = 定位模式+边偏移</p>
+<ul>
+<li>定位模式:
+用于指定一个元素在文档中的定位方式(如<strong>相对和绝对</strong>)</li>
+<li>边偏移: 决定该元素的最终位置(如<strong>top, left...</strong>)</li>
+</ul>
+<p>一般情况下, 有定位的地方必有边偏移</p>
+<h4 id="定位模式position">定位模式(position)</h4>
+<pre class="language-css" data-language="css"><code class="language-css"><span class="token selector">选择器</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> 属性值<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>值</th>
+<th>语义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>static</code></td>
+<td>静态定位</td>
+<td>几乎不用</td>
+</tr>
+<tr class="even">
+<td><code>relative</code></td>
+<td>相对定位</td>
+<td>相对于<u>自己原来的位置</u>, 保留位置</td>
+</tr>
+<tr class="odd">
+<td><code>absolute</code></td>
+<td>绝对定位</td>
+<td>相对于<u>祖先元素</u>的位置, 不保留位置</td>
+</tr>
+<tr class="even">
+<td><code>fixed</code></td>
+<td>固定定位</td>
+<td>固定于<u>浏览器可视区位置</u></td>
+</tr>
+</tbody>
+</table>
+<p>注意: + 对于<code>绝对定位</code> +
+没有祖先元素或者祖先元素没有定位的情况下, 以浏览器为基准进行定位 +
+如果祖先元素有定位, 则以最近一级的有定位的祖先元素为参考点移动位置 +
+绝对定位不保留位置(脱标) + 对于<code>固定定位</code> +
+以浏览器的可视窗口为参考点移动元素(不随滚动条滚动) + 不保留原来的位置 +
+<code>子绝父相</code> + 指子盒子元素相对定位, 父盒子元素绝对定位 +
+用于设置一个大盒子中嵌套一个不占位置的子盒子 +
+当父元素不需要保留位置的时候, 可演变为<code>子绝父绝</code></p>
+<h3 id="定位的一个常用应用">定位的一个常用应用</h3>
+<p>让盒子贴着版心右侧区域移动 1.
+具有固定定位属性的盒子<code>left: 50%</code> 2.
+再使其<code>margin-left: 版心宽度/2</code></p>
+<h3 id="堆叠顺序z-index">堆叠顺序(z-index)</h3>
+<blockquote>
+<p>定位布局时, 盒子可能会发生重叠的情况,
+此时可用<strong>z-index</strong>来调整前后次序</p>
+</blockquote>
+<p>语法 <pre class="language-css" data-language="css"><code class="language-css"><span class="token selector">选择器</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> 1'
+<span class="token punctuation">&#125;</span></code></pre></p>
+<p>特点: + 整数(包括0), 数值越大, 盒子越靠上 +
+如果每个盒子的<code>z-index</code>值相同, 则按照书写顺序来排 + 无单位 +
+用于<strong>相对定位&amp;绝对定位&amp;固定定位</strong></p>
+<h3 id="定位的拓展">定位的拓展</h3>
+<ul>
+<li>设置了<code>绝对定位&amp;固定定位</code>的盒子设置水平居中的方式
+<ol type="1">
+<li><code>left: 50%</code></li>
+<li><code>margin-left: -(本身宽度的一半)</code></li>
+</ol></li>
+<li>对于行内元素盒子, 添加<code>浮动</code>,
+<code>固定定位</code>或<code>绝对定位</code>,
+则不用转换即可直接设置宽度和高度</li>
+<li>添加浮动或定位, 则不会有<em>垂直外边距合并</em>的问题了</li>
+<li>绝对定位的元素会压住下面标准流的所有元素, 而浮动的元素会压住盒子,
+但不会压住文字</li>
+</ul>
+<h2 id="元素的显示与隐藏">元素的显示与隐藏</h2>
+<p><code>display</code></p>
+<p>语法:</p>
+<pre class="language-css" data-language="css"><code class="language-css"><span class="token property">display</span><span class="token punctuation">:</span> attribute<span class="token punctuation">;</span></code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>attribute</th>
+<th>explain</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>none</td>
+<td>隐藏对象, 之后不再占有位置</td>
+</tr>
+<tr class="even">
+<td>block</td>
+<td>转换位块级元素的同时显示元素</td>
+</tr>
+</tbody>
+</table>
+<p><code>visibility</code></p>
+<p>语法: <pre class="language-css" data-language="css"><code class="language-css"><span class="token property">visibility</span><span class="token punctuation">:</span> attribute<span class="token punctuation">;</span></code></pre></p>
+<table>
+<thead>
+<tr class="header">
+<th>attribute</th>
+<th>explain</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hidden</td>
+<td>隐藏对象, 继续占有位置</td>
+</tr>
+<tr class="even">
+<td>visible</td>
+<td>显示元素</td>
+</tr>
+</tbody>
+</table>
+<p><code>overflow</code></p>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">用于指定内容溢出元素时, 会发生什么</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>attribute</th>
+<th>explain</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>visible</td>
+<td>不剪切内容也不添加滚动条</td>
+</tr>
+<tr class="even">
+<td>hidden</td>
+<td>超出部分隐藏</td>
+</tr>
+<tr class="odd">
+<td>scroll</td>
+<td>始终显示滚动条</td>
+</tr>
+<tr class="even">
+<td>auto</td>
+<td>超出时才显示滚动条</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
       <categories>
         <category>learn</category>
