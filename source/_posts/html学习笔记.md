@@ -800,10 +800,100 @@ visibility: attribute;
 |scroll|始终显示滚动条|
 |auto|超出时才显示滚动条|
 
+## 精灵图
+`目的: `为了提高网页加载的速度
+`原理: `将小图片整合成一张大图片, 后续只需调整精灵图的位置即可
 
+`使用核心:`
++ 调整位置使用background-position
++ 一般调整的坐标值都是负数, 这是因为相对于浏览器的坐标是向右为正, 向下为正
++ 每个小图片的位置需要精确测量
 
+## 字体图标(iconfont)
+> 一般网页中的小图标都是字体图标, 展示的是图标, 本质属于字体
 
++ 可以改变颜色; 产生阴影效果; 透明效果; 旋转等
++ 主要针对的是图标部分
 
+### 字体图标的下载
++ **icomoon:**http://icomoon.io
++ **ali:**http://www.iconfont.cn/
+
+### 字体图标的使用
++ 网站上下载->解压->**fonts**文件夹放到页面的根目录下
++ css样式中全局声明字体
+
+```css
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?7kkyc2');
+    src:  url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+        url('fonts/icomoon.woff?7kkyc2') format('woff'),
+        url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+```
++ 标签内添加小图标
++ 给标签定义字体
+```css
+span {
+    font-family: "icomoon";
+}
+```
+
+`注意: `font-family须一致
+
++ 字体图标的追加: 在网站上上传`selection.json`, 再重新下载即可
+
+## css三角
+`做法原理: `盒子的宽度和高度设置为0, 边框设置得大一些, 能够产生三角的形状, 两个盒子进行拼凑则有可能可以得到一个梯形的形状
+
+## css用户界面样式
++ 鼠标样式
+```css
+li {
+    cursor: pointer; /* 小手的意思 */
+}
+```
++ 轮廓线
+```css
+input {
+ 	outline: none; /* 去掉默认的蓝色边框 */
+}
+```
++ 防止拖曳文本域(resize)
+```css
+textarea{ 
+ 	resize: none;
+}
+```
+
+## vertical-align属性应用
+> 用于设置图片/表单和文字的垂直对齐方式(只针对于行内元素/行内块元素)
+
+`语法`
+```css
+vertical-align : baseline | top | middle | bottom 
+```
+
+### 解决图片底部默认空白缝隙问题
+1. `vertical-align:middle | top| bottom`
+
+2. 把元素转为块级元素
+
+## 溢出的文字省略号显示
+```css
+  /*1. 先强制一行内显示文本*/
+   white-space: nowrap;  （ 默认 normal 自动换行）
+   
+  /*2. 超出的部分隐藏*/
+   overflow: hidden;
+   
+  /*3. 文字用省略号替代超出的部分*/
+   text-overflow: ellipsis;
+```
 
 
 
