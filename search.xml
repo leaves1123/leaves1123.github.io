@@ -882,7 +882,7 @@ float: left)</li>
 <p><code>目的:</code>为了提高网页加载的速度
 <code>原理:</code>将小图片整合成一张大图片,
 后续只需调整精灵图的位置即可</p>
-<p><em>使用核心:</em> + 调整位置使用background-position +
+<p><code>使用核心:</code> + 调整位置使用background-position +
 一般调整的坐标值都是负数, 这是因为相对于浏览器的坐标是向右为正, 向下为正
 + 每个小图片的位置需要精确测量</p>
 <h2 id="字体图标iconfont">字体图标(iconfont)</h2>
