@@ -895,6 +895,336 @@ vertical-align : baseline | top | middle | bottom
    text-overflow: ellipsis;
 ```
 
+## HTML5新特性
+
+### 新增加一些语义化标签
+|标签|说明|
+|--|--|
+|\<header>|头部标签|
+|\<nav>|导航栏标签|
+|\<article>|内容标签|
+|\<section>|定义文档某个区域|
+|\<aside>|侧边栏标签|
+|\<footer>|尾部标签|
+
+### 多媒体标签
+
+`1. 视频标签`
+> 一般使用.mp4格式
+
+语法:
+```html
+<video src="media/mi.mp4"></video>
+```
+
+常用属性
+|属性|值|说明|
+|--|--|--|
+|autoplay|autoplay|自动播放|
+|width|pixels|宽度|
+|height|pixels|高度|
+|loop|loop|循环播放|
+|src|url|播放源|
+|myted|muted|静音播放|
+
+**示例代码**
+
+```html
+<video src="media/mi.mp4" autoplay="autoplay" muted="muted"  loop="loop" poster="media/mi9.jpg"></video>
+```
+
+`2. 音频标签`
+> 一般使用.mp3格式
+
+语法:
+```html
+<audio src="media/music.mp3"></audio>
+```
+
+常用属性
+
+|属性|值|描述|
+|--|--|--|
+|autoplay|autoplay|自动播放|
+|controls|controls|显示播放按钮|
+|loop|loop|循环播放|
+|src|url|路径|
+
+**示例代码**
+
+```html
+<audio src="media/music.mp3" autoplay="autoplay" controls="controls"></audio>
+```
+
+### 新增表单元素
+
+语法:
+```html
+<input type="xxx"/>
+```
+常见的输入类型
+```markdown
+text password radio checkbox button file hidden submit reset image
+```
+
+## CSS3新特性
+
+### 属性选择器
+> 即根据标签中的属性来选择元素
+
+**示例代码**
+
+```css
+ /* 只选择 type =text 文本框的input 选取出来 */
+input[type=text] {
+    color: pink;
+}
+/* 选择首先是div 然后 具有class属性 并且属性值 必须是 icon开头的这些元素 */
+div[class^=icon] {
+    color: red;
+}
+/* 选择首先是section 然后 具有class属性 并且属性值 必须是 data结尾的这些元素 */
+section[class$=data] {
+    color: blue;
+}
+```
+`注: 权重为10`
+
+### 结构伪类选择器
+
+> 一般用于根据父级选择器选择里面的子元素, 更多的选取规则可网上查阅
+
+**示例代码**
+
+```html
+ <style>
+    ul li:first-child{
+      background-color: red;
+    }
+  </style>
+
+  <ul>
+    <li>列表项一</li>
+    <li>列表项二</li>
+    <li>列表项三</li>
+    <li>列表项四</li>
+  </ul>
+```
+
+注意:
++ `nth-child(n)`: 只有排序
++ `nth-of-type(n)`: 先考虑元素类型再排序
+
+
+### 伪元素选择器
+
+> 可以用于CSS创建新标签元素设置样式, 但并不是HTML标签, 因此称作`伪元素`
+
+|选择符|简介|
+|--|--|
+|::before|在元素的前面插入内容|
+|::after|在元素的后面插入内容|
+
+**示例代码**
+
+```html
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+    /* div::before 权重是2 */
+    div::before {
+        /* 这个content是必须要写的 */
+        content: '我';
+    }
+    div::after {
+        content: '小猪佩奇';
+    }
+</style>
+<body>
+    <div>
+        是
+    </div>
+</body>
+```
+
+注意:
++ before 和 after 创建一个元素，但是属于行内元素
++ 语法：`element::before {}`
++ before 和 after 必须有 `content` 属性 
++ before 在父元素内容的前面创建元素，after 在父元素内容的后面插入元素
+  伪元素选择器和标签选择器一样，权重为`1`
+
+应用场景一: `字体图标`
+
+**示例代码**
+
+```html
+<head>
+    ...
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?1lv3na');
+            src: url('fonts/icomoon.eot?1lv3na#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?1lv3na') format('truetype'),
+                url('fonts/icomoon.woff?1lv3na') format('woff'),
+                url('fonts/icomoon.svg?1lv3na#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+        div {
+            position: relative;
+            width: 200px;
+            height: 35px;
+            border: 1px solid red;
+        }
+
+        div::after {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-family: 'icomoon';
+            /* content: ''; */
+            content: '\e91e';
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+```
+
+应用场景二: `设置遮罩层`
+
+**示例代码**
+
+```html
+<head>
+    ...
+    <style>
+        .tudou {
+            position: relative;
+            width: 444px;
+            height: 320px;
+            background-color: pink;
+            margin: 30px auto;
+        }
+
+        .tudou img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .tudou::before {
+            content: '';
+            /* 隐藏遮罩层 */
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .4) url(images/arr.png) no-repeat center;
+        }
+
+        /* 当我们鼠标经过了 土豆这个盒子，就让里面before遮罩层显示出来 */
+        .tudou:hover::before {
+            /* 而是显示元素 */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tudou">
+        <img src="images/tudou.jpg" alt="">
+    </div>
+    <div class="tudou">
+        <img src="images/tudou.jpg" alt="">
+    </div>
+    <div class="tudou">
+        <img src="images/tudou.jpg" alt="">
+    </div>
+    <div class="tudou">
+        <img src="images/tudou.jpg" alt="">
+    </div>
+</body>
+```
+
+应用场景三: `清除浮动`
+
+### 盒子模型
+
+|属性: 值|说明|
+|--|--|
+|box-sizing: content-box|盒子大小为width+padding+border|
+|box-sizing: border-box|盒子大小为width|
+
+注: 当设置`box-sizing: border-box`时, padding和border在不超出宽度的情况下不会撑大盒子
+
+### 其它特性
+
++ 图片变模糊
+
+**语法:**
+
+```css
+filter:   函数(); -->  例如： filter: blur(5px);  -->  blur模糊处理  数值越大越模糊
+```
+
++ 计算盒子宽度
+
+**语法:**
+语法：
+
+```css
+width: calc(100% - 80px);
+```
+
++ 过渡
+> 一个状态过渡到另一个状态, 动态效果
+**语法:**
+
+```css
+transition: 要过渡的属性  花费时间  运动曲线  何时开始;
+```
+**示例代码**
+> 添加一个动态的progress bar
+```html
+<head>
+    ...
+    <style>
+        .bar {
+            width: 150px;
+            height: 15px;
+            border: 1px solid red;
+            border-radius: 7px;
+            padding: 1px;
+        }
+        .bar_in {
+            width: 50%;
+            height: 100%;
+            background-color: red;
+            /* 谁做过渡给谁加 */
+            transition: all .7s;
+        }
+        .bar:hover .bar_in {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <div class="bar_in"></div>
+    </div>
+</body>
+```
 
 
 
